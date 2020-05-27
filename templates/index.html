@@ -1,0 +1,228 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block styles %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel=StyleSheet href="{{url_for('.static', filename ='style.css')}}" >
+<link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Righteous">
+<link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Catamaran">
+{% endblock %}
+{% block body %}
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul class=flashes>
+  {% for message in messages %}
+  <li>{{ message }}</li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+
+<div class="background1" id="top">
+ <div class="transbox">
+  <div class="top">
+   <div class="arriba">                
+    <h1>COVID-19</h1>
+          
+
+  </div> 
+  <div class="arrder">
+
+    <h3> En este sitio encontraras toda la informacion que necesites<br>para entender todo lo que esta sucediendo<br> en Paraguay y en el Mundo</h3> 
+  </div>
+</div>
+</div> 
+
+<div class="abajo"> 
+        <h2>Muertes por millon de Habitantes</h2>
+        <iframe src="https://ourworldindata.org/grapher/total-covid-deaths-per-million?year=2020-05-08" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+        <br>
+        <h2>Muertes confirmadas</h2>
+        <iframe src="https://ourworldindata.org/grapher/total-deaths-covid-19" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+         <br> 
+        <h2>¿Cuál es el número total de casos confirmados?</h2>
+        <iframe src="https://ourworldindata.org/grapher/total-cases-covid-19" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+        <br>
+        <h2>¿Cuántas pruebas se realizan cada día?</h2>
+          <iframe src="https://ourworldindata.org/grapher/daily-covid-19-tests-per-thousand-rolling-3-day-average" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+
+
+
+</div>
+
+<!--   NAVBAR     NAVBAR       NAVBAR        NAVBAR  -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <a class="navbar-brand" href="/main/#top">COVID-19</a>
+ <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+ </button>
+ <div class="collapse navbar-collapse" id="navbarNavDropdown">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+     <a class="nav-link" href="/main/#origen">Origen de la Pandemia<span class="sr-only">(current)</span></a>
+   </li>
+   <li class="nav-item">
+     <a class="nav-link" href="/main/#consecuencias">Consecuencias de la Pandemia</a>
+   </li>
+   <li class="nav-item">
+    <a class="nav-link" href="/main/#sintomas">Síntomas y Tratamientos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/login">Login</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/">Registro</a>
+  </li>
+
+</div>
+</nav>
+<!--   NAVBAR     NAVBAR       NAVBAR        NAVBAR  -->
+
+<div class="background2"  id="origen">
+  <div class="transbox2">
+
+   <div class="arriba2">      
+     <h1>ORIGEN</h1>
+     <h2>DE LA PANDEMIA</h2>       
+
+
+   </div> 
+   <div class="arrder2">
+
+    <h3> En este sitio encontraras toda la informacion que necesites<br>para entender todo lo que esta sucediendo<br> en Paraguay y en el Mundo</h3> 
+  </div>
+
+</div>  
+<div class="abajo"> 
+ <p>En diciembre de 2019 hubo un brote epidémico de neumonía de causa desconocida en Wuhan, provincia de Hubei, China; el cual, según afirmó más tarde Reporteros sin Fronteras, llegó a afectar a más de 60 personas el veinte de ese mes. 
+Según el Centro Chino para el Control y Prevención de Enfermedades (CCDC), el 29 de diciembre un hospital en Wuhan admitió a 4 individuos con neumonía, quienes trabajaban en un mercado de esa ciudad. El hospital informó esto al CCDC, cuyo equipo en la ciudad inició una investigación. El equipo encontró más casos relacionados al mercado y el 30 de diciembre las autoridades de salud de Wuhan comunicaron los casos al CCDC, que envió expertos a Wuhan para apoyar la investigación. Se obtuvieron muestras de estos pacientes para realizar análisis de laboratorio.<br>
+El 31 de diciembre, el Comité de Salud Municipal de Wuhan informó a la Organización Mundial de la Salud (OMS) que 27 personas habían sido diagnosticadas con neumonía de causa desconocida, habiendo 7 en estado crítico; la mayoría de estos casos eran trabajadores del mencionado mercado.  Para el 1 de enero de 2020, el mercado había sido cerrado y se había descartado que el causante de la neumonía fuera el SARS, el MERS, gripe, gripe aviaria u otras enfermedades respiratorias comunes causadas por virus. 
+El 7 de enero de 2020 los científicos chinos habían aislado el virus causante de la enfermedad, y realizaron la secuenciación del genoma. Esta secuenciación estuvo disponible para la OMS el 12 de enero de 2020, permitiendo a los laboratorios de diferentes países producir diagnósticos específicos vía pruebas de PCR. <br>
+El 12 de enero de 2020, las autoridades chinas habían confirmado la existencia de 41 personas infectadas con el nuevo virus, quienes comenzaron a sentir síntomas entre el 8 de diciembre de 2019 y el 2 de enero de 2020, los cuales incluían: fiebre, malestar, tos seca, dificultad para respirar y fallos respiratorios;  también se observaron infiltrados neumónicos invasivos en ambos pulmones observables en las radiografías de tórax. <br>
+</p>
+
+
+</div> 
+
+</div>
+<div class="background3"  id="consecuencias">
+  <div class="transbox3">
+   <div class="top3">
+     <div class="arriba3">                
+       <h1>Consecuencias</h1>
+       <h2>de la Pandemia</h2>      
+     </div> 
+     <div class="arrder3">
+
+      <h3> En este sitio encontraras toda la informacion que necesites<br>para entender todo lo que esta sucediendo<br> en Paraguay y en el Mundo</h3> 
+    </div>
+  </div>
+</div>  
+<div class="abajo"> 
+  <p>En el contexto de esta refundación social que genera la pandemia, <br>algunas preguntas resultan urgentes a la hora de reducir la incertidumbre.<br> ¿Cuál será el impacto final de las infecciones?<br> ¿Cuándo culminará la dispersión?....</p>
+</div> 
+
+</div>
+
+
+<div class="background4" id="sintomas">
+  <div class="transbox4">
+   <div class="top4">
+     <div class="arriba4">                
+       <h1>Síntomas </h1>
+       <h2>y Tratamientos</h2> 
+     </div> 
+     <div class="arrder4">
+
+      <h3> En este sitio encontraras toda la informacion que necesites<br>para entender todo lo que esta sucediendo<br> en Paraguay y en el Mundo</h3> 
+    </div>
+  </div>
+</div>  
+<div class="abajo"> 
+
+ <p>Si presenta fiebre, tos y dificultad para respirar, busque inmediatamente atención médica. <br>Llame con antelación a su proveedor de atención de salud e indíquele si recientemente ha viajado o estado en contacto con personas que hayan viajado.</p>
+ <p>Cuidado personal No existe ningún medicamento para prevenir o tratar la COVID-19. Algunos pacientes pueden necesitar tratamiento sintomático que les ayude a respirar. Si presenta síntomas leves, quédese en casa hasta recuperarse.<br>
+  <bold>Puede aliviar sus síntomas:</bold><br>
+  descansando y durmiendo<br>
+  manteniéndose caliente<br>
+  bebiendo muchos líquidos<br>
+utilizando humidificadores o tomando duchas calientes para aliviar el dolor de garganta y la tos</p>
+</div> 
+<div class="comments">    
+  <div class="content-section" >
+    <h2 class="">Comparta sus ideas con la Comunidad</h2>
+    <form method="POST" action="/main/" id="ingresarpost">
+      {{ form.hidden_tag() }}
+      <fieldset class="form-group">
+        <legend class="border-bottom mb-4">{{ legend }}</legend>
+        <div class="form-group">
+          {{ form.title.label(class="form-control-label") }}
+          {% if form.title.errors %}
+          {{ form.title(class="form-control form-control-lg is-invalid") }}
+          <div class="invalid-feedback">
+            {% for error in form.title.errors %}
+            <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+          {% else %}
+          {{ form.title(class="form-control form-control-lg") }}
+          {% endif %}
+        </div>
+        <div class="form-group">
+          {{ form.body.label(class="form-control-label") }}
+          {% if form.body.errors %}
+          {{ form.body(class="form-control form-control-lg is-invalid") }}
+          <div class="invalid-feedback">
+            {% for error in form.body.errors %}
+            <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+          {% else %}
+          {{ form.body(class="form-control form-control-lg") }}
+          {% endif %}
+        </div>
+      </fieldset>
+      <div class="form-group">
+        {{ form.submit(class="btn btn-outline-info") }}
+      </div>
+    </form>
+  </div>
+  <div class="container" id="comentarios">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-60">
+        {% for post in posts %}
+        <div class="post-preview">
+          <br>
+          <h6 class="post-title">
+            {{ post.title }}
+          </h6>
+          <h4 class="post">
+            {{ post.body }}
+          </h4>
+
+        </div>
+        {% endfor %}
+        <hr>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  
+</div>
+</div>
+{% endblock %}
+
+<!--  
+<div class="container">
+    <h2>Dejanos un comentario</h2>
+         <form action="/7
+         42" class="form-signin" method="POST">
+            {{form.hidden_tag()}}
+            {{ wtf.form_field(form.title) }}
+            {{ wtf.form_field(form.content)}}
+            <div class="form-group">
+            {{form.submit(class="btn btn-outline-info")}}
+          </div>
+        </form>
+  </div> 

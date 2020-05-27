@@ -1,0 +1,63 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Sign Up
+{% endblock %}
+
+{% block styles %}
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel=StyleSheet href="{{url_for('.static', filename ='style.css') }}">
+      <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Righteous">
+      <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Catamaran">
+{% endblock %}
+
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                 <a class="navbar-brand" href="/main/#top">COVID-19</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+              </button>
+     <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+               <a class="nav-link" href="/main/#origen">Origen de la Pandemia<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="/main/#consecuencias">Consecuencias de la Pandemia</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/main/#sintomas">Síntomas y Tratamientos</a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link" href="/">Registro</a>
+            </li>
+            
+    </div>
+</nav>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+            <div class="container">
+
+              <form class="form-signin" method="POST" action="/">
+                <h2 class="form-signin-heading">Sign Up</h2>
+                {{ form.hidden_tag() }}
+                {{ wtf.form_field(form.username) }}
+                {{ wtf.form_field(form.email) }}
+                {{ wtf.form_field(form.password) }}
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+              </form>
+
+            </div> 
+
+{% endblock %}

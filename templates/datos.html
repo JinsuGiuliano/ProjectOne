@@ -1,0 +1,30 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block styles %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel=StyleSheet href="{{url_for('.static', filename ='style.css')}}" >
+<link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Righteous">
+<link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Catamaran">
+{% endblock %}
+{% block body %}
+
+
+ <div class="container">
+    <h2>TOTAL DE MUERTES EN EL MUNDO </h2>
+    <div class="row">
+      <div class="col-lg-100 col-md-100 mx-100">
+        {% for dats in data%}
+        <div class="post-preview">
+          <br>
+          {{ dats[0], dats[1] }}
+        </div>
+        {% endfor %}
+        <hr>
+      </div>
+    </div>
+  </div>
+
+
+
+
+{% endblock %}
